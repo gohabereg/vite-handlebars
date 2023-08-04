@@ -1,0 +1,13 @@
+.input {
+  width: fit-content;
+
+  margin: 8px 0;
+
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(86, 86, 243, 0.46);
+
+  &:focus {
+    border-bottom-color: #5656f3
+  }
+}
