@@ -1,9 +1,11 @@
 {{#> layouts/page title="Login Page"}}
+    <link rel="stylesheet" href="/src/pages/login/login.scss" />
     <div class="login-page">
-        {{#card}}
-            {{> input/input type="email" placeholder="Email" }}
-            {{> input/input type="password" placeholder="Password" }}
+        {{#> card/card}}
+            {{#each login.inputs }}
+                {{> input/input type=this.type placeholder=this.placeholder }}
+            {{/each}}
             {{> button/button label="Login" }}
-        {{/card}}
+        {{/card/card}}
     </div>
 {{/ layouts/page}}

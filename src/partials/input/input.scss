@@ -7,6 +7,7 @@
   outline: none;
   border-bottom: 1px solid rgba(86, 86, 243, 0.46);
 
+  &:hover,
   &:focus {
     border-bottom-color: #5656f3
   }

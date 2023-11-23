@@ -1,15 +1,25 @@
 import {defineConfig, Plugin} from 'vite';
 import {resolve} from 'path';
 import handlebars from 'vite-plugin-handlebars';
-import card from "./src/layouts/card/card";
 
 export default defineConfig({
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'src/partials'),
-            helpers: {
-                card,
-            },
+            context: {
+                login: {
+                    inputs: [
+                        {
+                            type: 'text',
+                            placeholder: 'Username',
+                        },
+                        {
+                            type: 'password',
+                            placeholder: 'Password',
+                        },
+                    ]
+                }
+            }
         }) as unknown as Plugin,
     ],
 
@@ -23,6 +33,6 @@ export default defineConfig({
         }
     },
     server: {
-        open: '/src/pages/login/signup.html'
+        open: '/src/pages/login/login.html'
     }
 });

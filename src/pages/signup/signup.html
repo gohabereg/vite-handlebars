@@ -1,6 +1,7 @@
 {{#> layouts/page title="Sign up Page" }}
+    <link rel="stylesheet" href="/src/pages/signup/signup.scss" />
     <div class="signup-page">
-        {{#card}}
+        {{#> card/card }}
             {{> input/input type="email" placeholder="Email" }}
             {{> input/input type="text" placeholder="Username" }}
             {{> input/input type="text" placeholder="First name" }}
@@ -8,6 +9,6 @@
             {{> input/input type="password" placeholder="Password" }}
             {{> input/input type="password" placeholder="Password again" }}
             {{> button/button label="Login" }}
-        {{/card}}
+        {{/card/card}}
     </div>
 {{/ layouts/page}}
